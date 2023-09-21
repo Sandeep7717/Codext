@@ -1,0 +1,211 @@
+.plan {
+    font-family: Inter;
+    margin: 200px 0 0 0;
+
+    h2 {
+        color: var(--Black);
+        text-align: center;
+
+
+        font-size: 44px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+    }
+
+    .tg {
+        margin: 30px 0;
+        text-align: center;
+
+        .first-span {
+
+            color: var(--Black);
+            text-align: center;
+
+
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 150%;
+
+            /* 33px */
+        }
+
+        .three-span {
+            color: var(--Black);
+            text-align: center;
+            opacity: 0.7;
+
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 150%;
+
+        }
+
+        .second-span {
+            padding-right: 15px;
+            padding-left: 18px;
+
+            vertical-align: middle;
+
+            input[type="checkbox"] {
+                position: relative;
+                width: 80px;
+                height: 33px;
+                -webkit-appearance: none;
+                appearance: none;
+                background: #c4dbe7;
+                outline: none;
+                border-radius: 2rem;
+                cursor: pointer;
+                border: 1px solid #42B4EE;
+
+            }
+
+            input[type="checkbox"]::before {
+                content: "";
+                width: 44px;
+                height: 23px;
+                border-radius: 50px;
+                background: #42b4ee;
+                position: absolute;
+                top: 4px;
+                left: 5px;
+                transition: 0.5s;
+            }
+
+            input[type="checkbox"]:checked::before {
+                transform: translateX(50%);
+                background: #fff;
+            }
+
+            input[type="checkbox"]:checked {
+                background: #6125b9;
+            }
+
+        }
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 1140px;
+        // height: 662px;
+        margin: 60px auto 143px auto;
+
+        li {
+            background: var(--white);
+            width: 360px;
+            margin: auto;
+            transition: 0.9s ease all;
+            text-align: center;
+            border-radius: 10px;
+            border: 2px solid transparent;
+            cursor: pointer;
+            box-shadow: 0px 6px 50px 5px rgba(6, 14, 26, 0.05);
+
+            .vic {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            span {
+                color: var(--black);
+                opacity: 0.7;
+                text-align: center;
+                display: block;
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 150%;
+                padding-top: 50px;
+
+
+            }
+
+            h2 {
+                padding-bottom: 40px;
+            }
+
+            img {
+                padding: 13px 0 7px 0;
+            }
+
+            p {
+
+                color: var(--paragraph-one);
+                text-align: center;
+
+                padding-bottom: 10px;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 160%;
+                opacity: 0.9;
+            }
+
+            .display {
+                text-align: center;
+                margin: 40px 69px 50px 68px;
+
+            }
+
+            .display a {
+                text-decoration: none;
+                color: #fff;
+                z-index: 9999;
+                border-radius: 5px;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+
+                line-height: 160%;
+                /* 32px */
+            }
+
+            .effect {
+                --width: 100%;
+                --time: 0.7s;
+
+                position: relative;
+                display: inline-block;
+
+                padding: 15px 30px;
+                z-index: 9999;
+
+                color: var(--white);
+                background: var(--brand);
+                overflow: hidden;
+            }
+
+
+            .effect span {
+                position: absolute;
+                display: block;
+                content: "";
+                z-index: 0;
+                width: 0;
+                height: 0;
+
+                border-radius: 100%;
+                background: var(--brand-primary);
+                z-index: -1;
+                transform: translate(-50%, -50%);
+                transition: width var(--time), padding-top var(--time);
+            }
+
+            .effect:hover span {
+                width: calc(var(--width) * 2.25);
+                padding-top: calc(var(--width) * 2.25);
+            }
+
+            &:hover {
+                border: 2px solid var(--border);
+
+            }
+        }
+    }
+}

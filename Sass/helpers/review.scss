@@ -1,0 +1,175 @@
+.review {
+    font-family: Inter;
+
+    h2 {
+        color: #060E1A;
+        text-align: center;
+
+        font-family: Inter;
+        font-size: 44px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+
+    }
+
+    .top-lorem {
+        color: var(--Black, #051114);
+        text-align: center;
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+        /* 28.8px */
+        width: 670px;
+        margin: 30px auto 0 auto;
+        opacity: 0.7;
+    }
+
+
+
+    .box {
+
+        .filtering .prev-arrow {
+            background-color: #5B1FB0;
+            position: absolute;
+            left: -100px;
+            top: 50%;
+            cursor: pointer;
+            z-index: 9999;
+            padding: 15px 20px;
+            border-radius: 5px;
+            transition: 0.9s ease all;
+            &:hover {
+                background-color: #42b4ee;
+            }
+
+        }
+
+        .filtering .next-arrow {
+            background-color: #5B1FB0;
+            position: absolute;
+            right: -100px;
+            top: 50%;
+            cursor: pointer;
+            z-index: 9999;
+            padding: 15px 20px;
+            border-radius: 5px;
+            transition: 0.9s ease all;
+
+            &:hover {
+                background-color: #42b4ee;
+            }
+
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 1140px;
+            z-index: 999;
+            margin: 60px auto 70px auto;
+
+
+            li {
+                background: var(--white);
+                border-radius: 10px;
+                cursor: pointer;
+                box-shadow: 2px 4px 4px 0 #0511140d;
+                width: 360px;
+                height: 291px;
+                position: relative;
+                transition: 0.9s ease all;
+                margin: 10px 10px 10px 0;
+
+
+                &:hover {
+
+                    box-shadow: 2px 4px 4px 0 #5B1FB0;
+                }
+
+                .gray-img {
+                    width: 22.801px;
+                    height: 19.042px;
+                    position: absolute;
+                    content: "";
+                    left: 54px;
+                    top: 54px;
+
+                    .gray {
+                        display: none;
+                    }
+                }
+
+                &:hover .gray {
+                    display: block;
+                }
+
+                &:hover .light {
+                    display: none;
+                }
+
+                .gray-text {
+
+
+                    .lorem-last {
+                        color: var(--Black, #051114);
+
+                        font-size: 12px;
+                        font-style: italic;
+                        font-weight: 500;
+                        line-height: 160%;
+                        /* 19.2px */
+                        width: 200px;
+                        margin: 60px 70px 0 90px;
+                    }
+
+                    .bottom-box {
+                        display: flex;
+                        align-items: center;
+
+                        .my-img {
+                            margin: 25px 20px 50px 57px;
+
+                            img {
+
+                                width: 80px;
+                                height: 80px;
+                                border-radius: 50%;
+                            }
+                        }
+
+                        .my-text {
+
+                            margin: 0 0 35px 0;
+
+                            h3 {
+                                color: #051114;
+
+                                font-size: 20px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 160%;
+                            }
+
+                            .work {
+                                color: var(--Black, #051114);
+                                font-family: Inter;
+                                font-size: 10px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 160%;
+                                /* 16px */
+                            }
+                        }
+                    }
+                }
+
+            }
+
+
+        }
+    }
+}
