@@ -395,13 +395,18 @@ ul li {
 .feature ul li:hover .circle-text {
   margin-top: 20px;
 }
-.feature ul li:hover .icon-arrow-one {
+.feature ul li:hover {
+  z-index: 1;
+  -webkit-transform: translateX(0) translateY(0) scaleX(1) scaleY(1) rotate(3deg) skewX(0deg) skewY(0deg);
+          transform: translateX(0) translateY(0) scaleX(1) scaleY(1) rotate(3deg) skewX(0deg) skewY(0deg);
+}
+.feature ul:hover .icon-arrow-one {
   display: block;
 }
-.feature ul li:hover .icon-arrow {
+.feature ul:hover .icon-arrow {
   display: none;
 }
-.feature ul li .vic {
+.feature ul .vic {
   position: absolute;
   bottom: -5px;
   left: 0;
@@ -409,10 +414,7 @@ ul li {
   overflow: hidden;
   width: 100%;
 }
-.feature ul li:hover {
-  border: 2px solid var(--brand-primary);
-}
-.feature ul li .circle-one {
+.feature ul .circle-one {
   width: 150px;
   height: 150px;
   background: var(--circle);
@@ -420,10 +422,10 @@ ul li {
   text-align: center;
   margin: 40px 57px 21px 56px;
 }
-.feature ul li .circle-one img {
+.feature ul .circle-one img {
   padding: 31% 0;
 }
-.feature ul li .circle-two {
+.feature ul .circle-two {
   width: 150px;
   height: 150px;
   background: var(--circle-two);
@@ -431,10 +433,10 @@ ul li {
   text-align: center;
   margin: 40px 57px 21px 56px;
 }
-.feature ul li .circle-two img {
+.feature ul .circle-two img {
   padding: 35% 0;
 }
-.feature ul li .circle-three {
+.feature ul .circle-three {
   width: 150px;
   height: 150px;
   background: var(--circle-three);
@@ -442,10 +444,10 @@ ul li {
   text-align: center;
   margin: 40px 57px 21px 56px;
 }
-.feature ul li .circle-three img {
+.feature ul .circle-three img {
   padding: 34% 0;
 }
-.feature ul li .circle-four {
+.feature ul .circle-four {
   width: 150px;
   height: 150px;
   background: var(--circle-four);
@@ -453,16 +455,16 @@ ul li {
   text-align: center;
   margin: 40px 57px 21px 56px;
 }
-.feature ul li .circle-four img {
+.feature ul .circle-four img {
   padding: 31% 0;
 }
-.feature ul .circle-text {
+.feature .circle-text {
   z-index: 1;
   position: absolute;
   left: 10%;
   margin-top: 20px;
 }
-.feature ul .circle-text h3 {
+.feature .circle-text h3 {
   color: var(--Black);
   text-align: center;
   font-size: 25px;
@@ -470,7 +472,7 @@ ul li {
   font-weight: 500;
   line-height: 150%;
 }
-.feature ul .circle-text p {
+.feature .circle-text p {
   color: var(--paragraph);
   text-align: center;
   font-family: Inter;
@@ -483,11 +485,11 @@ ul li {
   margin: auto;
   padding: 10px 0 20px 0;
 }
-.feature ul .circle-text .icon-arrow {
+.feature .circle-text .icon-arrow {
   text-align: center;
   cursor: pointer;
 }
-.feature ul .circle-text .icon-arrow-one {
+.feature .circle-text .icon-arrow-one {
   text-align: center;
   display: none;
   cursor: pointer;
@@ -700,7 +702,9 @@ ul li {
   border-radius: 10px;
 }
 .news ul li .news-img:hover {
-  border: 3px solid var(--brand);
+  z-index: 1;
+  -webkit-transform: translateX(0) translateY(0) scaleX(1.1) scaleY(1.1) rotate(0deg) skewX(0deg) skewY(0deg);
+          transform: translateX(0) translateY(0) scaleX(1.1) scaleY(1.1) rotate(0deg) skewX(0deg) skewY(0deg);
   border-radius: 10px;
 }
 .news ul li img {
