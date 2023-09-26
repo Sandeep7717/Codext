@@ -83,7 +83,7 @@
                             <li>
                                 <a href="#">Blog</a>
                             </li>
-                            <li>
+                            <li> 
                                 <a href="#">FREE TRIAL</a>
                             </li>
                         </ul>
@@ -898,6 +898,64 @@
         </div>
     </div>
 
+    <div class="form-last">
+
+
+
+        <form id="Form">
+            <h1 id="FormHeading">Sign Up</h1>
+            <div class="Name">
+                <li><label>First Name:</label>
+                    <input type="text" placeholder="Sandeep">
+                </li>
+                <li><label>Last Name:</label>
+                    <input type="text" placeholder="Choudhary">
+                </li>
+            </div>
+            <li>
+                <label>Email:</label>
+                <input type="email" placeholder="johndoe123@gmail.com">
+            </li>
+            <div class="Phone">
+                <li><label>Country:</label>
+                    <select>
+
+
+                        <option>India</option>
+                        <option>Albania</option>
+                        <option>Algeria</option>
+                        <option>Andorra</option>
+                        <option>Angola</option>
+                        <option>Argentina</option>
+                        <option>Armenia</option>
+                        <option>Australia</option>
+                        <option>Austria</option>
+                        <option>Azerbaijan</option>
+                        <option>Croatia</option>
+
+                        <select>
+                <li>
+                    <label>Phone No:</label><input type="pattern" placeholder="123-456-789">
+                </li>
+            </div>
+            <div class="password">
+                <li><label>Password:</label> <input type="password"></li>
+                <li><label>Confirm Password:</label> <input type="password"></li>
+            </div>
+            <li class="Subscribe">
+                <div class="CheckBoxCont" onclick="ToggleCheckBox(this)" data-status="true">
+                    <div class="tick">
+                        <hr class="Tickline1">
+                        <hr class="Tickline2">
+                    </div>
+                </div><label for="subscribe">I want to get updates.</label>
+            </li>
+            <button type="submit">Sign Up</button>
+        </form>
+
+    </div>
+
+
 
 
 
@@ -988,110 +1046,138 @@
 
 
         $(document).on("scroll", function () {
-    var pageTop = $(document).scrollTop()
-    var pageBottom = pageTop + $(window).height()
-    var tags = $(".fadein")
+            var pageTop = $(document).scrollTop()
+            var pageBottom = pageTop + $(window).height()
+            var tags = $(".fadein")
 
-    for (var i = 0; i < tags.length; i++) {
-      var tag = tags[i]
+            for (var i = 0; i < tags.length; i++) {
+                var tag = tags[i]
 
-      if ($(tag).offset().top < pageBottom) {
-        $(tag).addClass("visible")
-      } else {
-        $(tag).removeClass("visible")
-      }
-    }
-  })
+                if ($(tag).offset().top < pageBottom) {
+                    $(tag).addClass("visible")
+                } else {
+                    $(tag).removeClass("visible")
+                }
+            }
+        })
 
-  $(function() {
-  
-  var html = $('html');
-  // Detections
-  if (!("ontouchstart" in window)) {
-    html.addClass("noTouch");
-  }
-  if ("ontouchstart" in window) {
-    html.addClass("isTouch");
-  }
-  if ("ontouchstart" in window) {
-    html.addClass("isTouch");
-  }
-  if (document.documentMode || /Edge/.test(navigator.userAgent)) {
-    if (navigator.appVersion.indexOf("Trident") === -1) {
-      html.addClass("isEDGE");
-    } else {
-      html.addClass("isIE isIE11");
-    }
-  }
-  if (navigator.appVersion.indexOf("MSIE") !== -1) {
-    html.addClass("isIE");
-  }
-  if (
-    navigator.userAgent.indexOf("Safari") != -1 &&
-    navigator.userAgent.indexOf("Chrome") == -1
-  ) {
-    html.addClass("isSafari");
-  }
+        $(function () {
 
-  // On Screen
+            var html = $('html');
+            // Detections
+            if (!("ontouchstart" in window)) {
+                html.addClass("noTouch");
+            }
+            if ("ontouchstart" in window) {
+                html.addClass("isTouch");
+            }
+            if ("ontouchstart" in window) {
+                html.addClass("isTouch");
+            }
+            if (document.documentMode || /Edge/.test(navigator.userAgent)) {
+                if (navigator.appVersion.indexOf("Trident") === -1) {
+                    html.addClass("isEDGE");
+                } else {
+                    html.addClass("isIE isIE11");
+                }
+            }
+            if (navigator.appVersion.indexOf("MSIE") !== -1) {
+                html.addClass("isIE");
+            }
+            if (
+                navigator.userAgent.indexOf("Safari") != -1 &&
+                navigator.userAgent.indexOf("Chrome") == -1
+            ) {
+                html.addClass("isSafari");
+            }
 
-  $.fn.isOnScreen = function() {
-    var elementTop = $(this).offset().top,
-      elementBottom = elementTop + $(this).outerHeight(),
-      viewportTop = $(window).scrollTop(),
-      viewportBottom = viewportTop + $(window).height();
-    return elementBottom > viewportTop && elementTop < viewportBottom;
-  };
+            // On Screen
 
-  function detection() {
-    for (var i = 0; i < items.length; i++) {
-      var el = $(items[i]);
+            $.fn.isOnScreen = function () {
+                var elementTop = $(this).offset().top,
+                    elementBottom = elementTop + $(this).outerHeight(),
+                    viewportTop = $(window).scrollTop(),
+                    viewportBottom = viewportTop + $(window).height();
+                return elementBottom > viewportTop && elementTop < viewportBottom;
+            };
 
-      if (el.isOnScreen()) {
-        el.addClass("in-view");
-      } else {
-        el.removeClass("in-view");
-      }
-    }
-  }
+            function detection() {
+                for (var i = 0; i < items.length; i++) {
+                    var el = $(items[i]);
 
-  var items = document.querySelectorAll(
-    "*[data-animate-in], *[data-detect-viewport]"
-  ),
-    waiting = false,
-    w = $(window);
+                    if (el.isOnScreen()) {
+                        el.addClass("in-view");
+                    } else {
+                        el.removeClass("in-view");
+                    }
+                }
+            }
 
-  w.on("resize scroll", function() {
-    if (waiting) {
-      return;
-    }
-    waiting = true;
-    detection();
+            var items = document.querySelectorAll(
+                "*[data-animate-in], *[data-detect-viewport]"
+            ),
+                waiting = false,
+                w = $(window);
 
-    setTimeout(function() {
-      waiting = false;
-    }, 100);
-  });
+            w.on("resize scroll", function () {
+                if (waiting) {
+                    return;
+                }
+                waiting = true;
+                detection();
 
-  $(document).ready(function() {
-    setTimeout(function() {
-      detection();
-    }, 500);
+                setTimeout(function () {
+                    waiting = false;
+                }, 100);
+            });
 
-    for (var i = 0; i < items.length; i++) {
-      var d = 0,
-        el = $(items[i]);
-      if (items[i].getAttribute("data-animate-in-delay")) {
-        d = items[i].getAttribute("data-animate-in-delay") / 1000 + "s";
-      } else {
-        d = 0;
-      }
-      el.css("transition-delay", d);
-    }
-  });
-});
+            $(document).ready(function () {
+                setTimeout(function () {
+                    detection();
+                }, 500);
+
+                for (var i = 0; i < items.length; i++) {
+                    var d = 0,
+                        el = $(items[i]);
+                    if (items[i].getAttribute("data-animate-in-delay")) {
+                        d = items[i].getAttribute("data-animate-in-delay") / 1000 + "s";
+                    } else {
+                        d = 0;
+                    }
+                    el.css("transition-delay", d);
+                }
+            });
+        });
+        function ToggleCheckBox(elem) {
+            var TickLine1 = elem.querySelector(".tick>.Tickline1")
+            var Tickline2 = elem.querySelector(".tick>.Tickline2")
+            if (elem.getAttribute("data-status") == "true") {
+                TickLine1.style.opacity = 1
+                Tickline2.style.opacity = 1
+                elem.setAttribute("data-status", false)
+
+            } else {
+                TickLine1.style.opacity = 0
+                Tickline2.style.opacity = 0
+                elem.setAttribute("data-status", true)
 
 
+            }
+        }
+
+
+        $(window).scroll(function () {
+            $('.form-last').hide();
+        });
+        $('.nav-bar li:last-child').click(function () {
+            $('.form-last').slideToggle();
+        })
+
+        $('.bell-icon').click(function () {
+            $('.Notifications-text').show();
+            $('.modal-sinup-overlay').show();
+            $('body').addClass('scroll')
+        })
 
 
     </script>
