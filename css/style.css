@@ -192,7 +192,7 @@ form select {
   padding: 10px;
   border-radius: 8px;
   border: 1px solid transparent;
-  background-color: rgba(157, 157, 157, 0.431372549);
+  background-color: #f0f1f2;
   width: 100%;
   outline: none;
   color: var(--main-color);
